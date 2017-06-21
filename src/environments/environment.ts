@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  wpBase: '//localhost/wp-json/wp/v2/'
+  wpBase: 'http://www.mandymozart.com/wp-json/wp/v2/'
 };
