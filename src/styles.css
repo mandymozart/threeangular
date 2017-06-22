@@ -1,1 +1,115 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: 'chancery';
+    src: url('/chancery.ttf');
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-size: 20px;
+}
+body {
+    background: #fafafa;
+    margin:4rem;
+}
+#bg {
+    background-image: url('http://2.bp.blogspot.com/-e5OiZNTMM7s/T2HQ2qu-g7I/AAAAAAAABMk/HoVDOqbFuT8/s1600/Seamless%2Bmarble%2Btexture%2B%25252811%252529.jpg');
+    background-attachment: fixed;
+    background-origin: padding-box;
+    background-position: left top;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.2;
+    z-index: 0;
+}
+app-root,
+#wrapper {
+    text-align: center;
+    font-family: 'Apple Chancery', 'Chancery', 'chancery';
+    color: #444;
+    line-height: 1.8em;
+    cursor: default;
+    position: relative;
+    z-index: 999;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.2);
+    margin: 60px auto;
+    width: 1100px;
+    height: 100%;
+}
+#tables {
+}
+#table1 {
+    width: 550px;
+    height: 90%;
+    float: left;
+    position: fixed;
+}
+#table2 {
+    width: 550px;
+    position: relative;
+    left: 550px;
+}
+#table td {
+    text-align: center;
+    width: 550px;
+}
+#logo {
+    margin-bottom: 0px;
+}
+h2 {
+    font-size: 22px;
+    line-height: 1.0em;
+    margin: 0 0 0.5em 0;
+    padding: 0;
+    font-weight: bold;
+    display: inline-block;
+    padding: 0 0.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+a {
+    text-decoration: none;
+    background: #FEE;
+    color: #444;
+    cursor: pointer;
+}
+a:hover {
+    cursor: pointer;
+    background-image: linear-gradient(bottom, rgb(255,238,238) 25%, rgb(195,246,250) 100%);
+    background-image: -o-linear-gradient(bottom, rgb(255,238,238) 25%, rgb(195,246,250) 100%);
+    background-image: -moz-linear-gradient(bottom, rgb(255,238,238) 25%, rgb(195,246,250) 100%);
+    background-image: -webkit-linear-gradient(bottom, rgb(255,238,238) 25%, rgb(195,246,250) 100%);
+    background-image: -ms-linear-gradient(bottom, rgb(255,238,238) 25%, rgb(195,246,250) 100%);
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.25, rgb(255,238,238)),
+        color-stop(1, rgb(195,246,250))
+    );			
+}
+#player {
+    width: 300px;
+    position: fixed;
+    bottom: -30px;
+    right: 50%;
+    margin-right: -150px;
+    opacity: 0.5;
+    z-index: 9999;
+}
+#player:hover {
+    opacity: 1;
+}
+.pink {
+    opacity: 0.4;
+}
+	
+	

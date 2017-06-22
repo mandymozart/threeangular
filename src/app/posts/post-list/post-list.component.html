@@ -1,8 +1,8 @@
-<ul>
-  <li *ngFor="let post of posts" (click)="selectPost(post.slug)">
+<div>
+  <a *ngFor="let post of posts" (click)="selectPost(post.slug)">
     {{ post.title.rendered }}
-  </li>
-</ul>
+  </a>
+</div>
 <div *ngIf="error">
   Error: {{error}}
 </div>

@@ -1,0 +1,9 @@
+<div class="album-list">
+  <div class="song" *ngFor="let song of albums$ | async" >
+    <h3><a (click)="selectAlbum(song.slug)">{{ song.title.rendered }}</a></h3>
+    <p [innerHtml]="song.content.rendered"></p>
+  </div>
+</div>
+<div *ngIf="error">
+  Error: {{error}}
+</div>
