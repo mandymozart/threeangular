@@ -5,5 +5,10 @@
 
 export const environment = {
   production: false,
-  wpBase: 'http://www.mandymozart.com/wp-json/wp/v2/'
+  wpBase: 'http://www.mandymozart.com/wp-json/wp/v2/',
+  wpTagIds: {
+    album: 4,
+    song: 5,
+    artist: 6
+  }
 };

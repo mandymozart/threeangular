@@ -1,28 +1,23 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PostListComponent } from './posts/post-list/post-list.component';
-import { PostSingleComponent } from './posts/post-single/post-single.component';
-import { AlbumListComponent } from './albums/album-list/album-list.component';
-import { AlbumSingleComponent } from './albums/album-single/album-single.component';
+// TODO: Refactor routes to views
+import { InfoViewComponent } from './views/info-view/info-view.component';
+import { AlbumViewComponent } from './views/album-view/album-view.component';
+import { SongViewComponent } from './views/song-view/song-view.component';
 
 const routes: Routes = [
   {
-    path: 'posts',
-    component: PostListComponent,
-    pathMatch: 'full'
-  },
-  {
-    path: 'posts/:slug',
-    component: PostSingleComponent
-  },
-  {
     path: '',
-    component: AlbumListComponent
+    component: AlbumViewComponent
   },
   {
     path: ':slug',
-    component: AlbumSingleComponent
+    component: InfoViewComponent
   },
+  {
+    path: 'womensloveandlife/:slug',
+    component: SongViewComponent
+  }
 ];
 
 @NgModule({

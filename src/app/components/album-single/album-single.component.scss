@@ -1,0 +1,94 @@
+:host {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+/* ScrollerApp */
+canvas {
+	width:100%;
+	height:100%;
+	vertical-align:bottom;
+}
+
+div#scrollContainer {
+	position:fixed;
+	z-index:100;
+	width:100%;
+	height:100%;
+	overflow-y:scroll;
+	-webkit-overflow-scrolling:touch;
+}
+div#scrollContent {
+	width:100%;
+	height:20000px;
+}
+
+div#container {
+	position:fixed;
+	z-index:1;
+	width:100%;
+	height:100%;
+}
+
+div#logo {
+	position:fixed;
+	z-index:110;
+	right:5%;
+	bottom:22.5%;
+	opacity:0.32;
+}
+div#meta {
+	position:fixed;
+	z-index:111;
+	right:5%;
+	bottom:10%;
+	width:128px;
+	font-size:10px;
+	font-weight:300;
+	color:rgba(255,255,255,0.32);
+}
+div#meta p {
+	text-align:justify;
+	text-align-last:justify;
+}
+div#info {
+	position:fixed;
+	z-index:120;
+	left:50%;
+	top:50%;
+	-webkit-transform:translate(-50%,-50%);
+	transform:translate(-50%,-50%);
+	width:80%;
+	font-size:24px;
+	font-weight:300;
+	text-align:center;
+	color:rgba(255,255,255,0.64);
+	display:none;
+}
+div#contact {
+	position:fixed;
+	z-index:121;
+	bottom:7.5%;
+	width:100%;
+	font-size:12px;
+	font-weight:400;
+	text-align:center;
+	color:rgba(255,255,255,0.5);
+	display:none;
+}
+
+div#loading {
+	position:fixed;
+	z-index:50;
+	top:50%;
+	left:50%;
+	-webkit-transform:translate(-50%);
+	transform:translate(-50%);
+	width:200px;
+}
+div#bar {
+	width:0;
+	height:1px;
+	background-color:#ffffff;
+}

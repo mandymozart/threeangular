@@ -1,43 +1,36 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, Http } from '@angular/http';
 
-import { 
-  WpApiModule,
-  WpApiLoader,
-  WpApiStaticLoader
-} from 'wp-api-angular'
-
-export function WpApiLoaderFactory(http: Http) {
-  return new WpApiStaticLoader(http, 'http://www.mandymozart.com/wp-json/', /* namespace is optional, default: '/wp/v2' */);
-}
-
 import { AppComponent } from './app.component';
-import { PostListComponent } from './posts/post-list/post-list.component';
 import { Wpng2RoutingModule } from './app-routing.module';
-import { PostSingleComponent } from './posts/post-single/post-single.component';
-import { AlbumListComponent } from './albums/album-list/album-list.component';
-import { AlbumSingleComponent } from './albums/album-single/album-single.component';
+
+import { PostSingleComponent } from './components/post-single/post-single.component';
+import { AlbumSingleComponent } from './components/album-single/album-single.component';
+import { SongComponent } from './components/song/song.component';
+
+import { AlbumViewComponent } from './views/album-view/album-view.component';
+import { InfoViewComponent } from './views/info-view/info-view.component';
+import { SongViewComponent } from './views/song-view/song-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PostListComponent,
     PostSingleComponent,
-    AlbumListComponent,
-    AlbumSingleComponent
+    AlbumSingleComponent,
+    SongComponent,
+    AlbumViewComponent,
+    InfoViewComponent,
+    SongViewComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     Wpng2RoutingModule,
-    WpApiModule.forRoot({
-      provide: WpApiLoader,
-      useFactory: (WpApiLoaderFactory),
-      deps: [Http]
-    })
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

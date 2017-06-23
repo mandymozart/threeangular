@@ -1,0 +1,11 @@
+<div *ngIf="song">
+  <h1>{{ song.title.rendered }}</h1>
+  <div [innerHTML]="song.content.rendered"></div>
+</div>
+<div *ngIf="!song">
+  song not found
+</div>
+
+<p>
+  song works!
+</p>

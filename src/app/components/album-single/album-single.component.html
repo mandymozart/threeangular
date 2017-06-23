@@ -1,0 +1,28 @@
+  <div id="container"></div>
+  <div id="logo"></div>
+  <div id="meta"></div>
+  <div id="info">
+      <h2>LOVE</h2>
+      <p>IS A UNIVERSAL FEELING, A DAY DREAM, A VIRTUAL REALITY, A SPACE WE CALL OUR OWN, THAT MEN CAN NOT UNDERSTAND, THAT WOMEN ARE, THAT HUMANITY NEEDS, THAT COMFORMTS, THAT IS, THAT WE SEEK, THAT WE KEEP, THE ONLY THING!</p>
+  </div>
+  <div id="contact">
+      <p>MANDY MOZART &middot; &copy; Shalom Salon 2017 &middot; <a href="http://www.soundcloud.com/mandymoart" target="_blank">Soundcloud</a> &middot; <a href="mailto:booking@shalomsalon.de">booking@shalomsalon.de</a></p>
+  </div>
+  <div id="loading">
+      <div id="bar"></div>
+  </div>
+
+  <div id="scrollContainer"><div id="scrollContent"></div></div>
+
+
+
+
+<div *ngIf="album">
+  <div class="song" *ngFor="let song of album" >
+    <h3><a (click)="selectSong(song.slug)">{{ song.title.rendered }}</a></h3>
+    <p [innerHtml]="song.content.rendered"></p>
+  </div>
+</div>
+<div *ngIf="!album">
+  Album not found
+</div>

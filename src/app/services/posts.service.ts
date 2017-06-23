@@ -7,7 +7,7 @@ import 'rxjs/add/observable/throw';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
-import { Post } from './post';
+import { Post } from './../models/post';
 
 import { environment } from '../../environments/environment';
 
